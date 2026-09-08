@@ -22,7 +22,10 @@
 <nav>
   <div class="nav-inner">
     <div class="prompt"><span class="sym">&gt;</span> cd <span class="path">~/mohamed-helal</span> <span class="cursor"></span></div>
-    <div class="nav-links">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
       <a href="#top">Home</a>
       <a href="#training">Training</a>
       <a href="#projects">Projects</a>
@@ -155,10 +158,72 @@
       <p>End-to-end projects — from raw data and architectural design to a deployed, working system.</p>
     </div>
 
+    <div class="filter-bar reveal" role="group" aria-label="Filter projects by topic">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="oop">OOP</button>
+      <button class="filter-btn" data-filter="data-analysis">Data Analysis</button>
+      <button class="filter-btn" data-filter="ml">Machine Learning</button>
+      <button class="filter-btn" data-filter="dl">Deep Learning</button>
+      <button class="filter-btn" data-filter="nlp">NLP</button>
+      <button class="filter-btn" data-filter="llm">LLM's</button>
+      <button class="filter-btn" data-filter="rag">RAG</button>
+      <button class="filter-btn" data-filter="fine-tuning">Fine-Tuning</button>
+      <button class="filter-btn" data-filter="agents">Agents</button>
+    </div>
+
+    <!-- Add any NEW project block right here (at the top) so the newest work shows first. -->
     <div class="proj-grid">
 
-      <!-- PROJ_01: Clinic & Hospital Management System -->
-      <div class="proj-card reveal" style="--accent:var(--v);">
+      <!-- PROJ_04: CourseTA Platform -->
+      <div class="proj-card reveal" data-cats="nlp llm rag agents" style="--accent:var(--b);">
+        <div class="proj-thumb-wrap proj-thumb-placeholder">AGENTIC_PLATFORM</div>
+        <div class="proj-id"><span>PROJ_04 · AGENTIC PLATFORM</span><span class="conf">RAG</span></div>
+        <h3>CourseTA (EduFlowTA) — Agentic Educational Content Platform</h3>
+        <p>Multi-agent system with specialized agents for question generation, summarization, and feedback-driven refinement, built on a RAG pipeline over course materials with async FastAPI microservices, Whisper transcription, and PyMuPDF parsing. Built as part of a team.</p>
+        <div class="stack-row">
+          <span class="stack-tag">LangChain</span><span class="stack-tag">LangGraph</span><span class="stack-tag">FastAPI</span><span class="stack-tag">RAG</span><span class="stack-tag">Whisper</span>
+        </div>
+        <div class="proj-links-row">
+          <!-- TODO: replace # with the live project link when ready -->
+          <a class="proj-link" href="https://github.com/M0hamedHelal/EduFlowTA" target="_blank" rel="noopener">GitHub</a>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">Website</a>
+        </div>
+      </div>
+
+      <!-- PROJ_03: Newborn Health Monitoring -->
+      <div class="proj-card reveal" data-cats="ml" style="--accent:var(--g);">
+        <div class="proj-thumb-wrap proj-thumb-placeholder">NEWBORN_RISK.PY</div>
+        <div class="proj-id"><span>PROJ_03 · WEB APP</span><span class="conf">classifier</span></div>
+        <h3>Newborn Health Monitoring &amp; Risk Assessment</h3>
+        <p>A Flask web app that classifies a newborn's risk level (Healthy / At Risk) from growth and vital-sign data — birth measurements, heart &amp; respiratory rate, oxygen saturation, temperature, feeding, and Apgar score — using a Decision Tree model served through a REST API with a browser-based form.</p>
+        <div class="stack-row">
+          <span class="stack-tag">Flask</span><span class="stack-tag">Decision Tree</span><span class="stack-tag">REST API</span><span class="stack-tag">HTML/CSS/JS</span>
+        </div>
+        <div class="proj-links-row">
+          <!-- TODO: replace # with the live project link when ready -->
+          <a class="proj-link" href="https://github.com/M0hamedHelal" target="_blank" rel="noopener">GitHub</a>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">Website</a>
+        </div>
+      </div>
+
+      <!-- PROJ_02: Heart Disease Prediction -->
+      <div class="proj-card reveal" data-cats="data-analysis ml" style="--accent:var(--r);">
+        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/heart-disease-features.png" alt="Feature importance chart from the Random Forest heart disease model"></div>
+        <div class="proj-id"><span>PROJ_02 · FULL ML PIPELINE</span><span class="conf">acc 0.90</span></div>
+        <h3>Heart Disease Prediction — Full ML Pipeline</h3>
+        <p>End-to-end pipeline on clinical data: preprocessing and encoding, PCA and feature selection, four supervised classifiers (Logistic Regression, Decision Tree, Random Forest, SVM) with GridSearch hyperparameter tuning, K-Means for unsupervised exploration, and a Streamlit app for live predictions.</p>
+        <div class="stack-row">
+          <span class="stack-tag">Scikit-learn</span><span class="stack-tag">PCA</span><span class="stack-tag">Random Forest</span><span class="stack-tag">SVM</span><span class="stack-tag">Streamlit</span>
+        </div>
+        <div class="proj-links-row">
+          <!-- TODO: replace # with the live project link when ready -->
+          <a class="proj-link" href="https://github.com/M0hamedHelal" target="_blank" rel="noopener">GitHub</a>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">Website</a>
+        </div>
+      </div>
+
+      <!-- PROJ_01: Clinic & Hospital Management System (kept as #1, shown last as requested) -->
+      <div class="proj-card reveal" data-cats="oop" style="--accent:var(--v);">
         <div class="proj-thumb-wrap">
           <img class="proj-thumb" src="images/Hospital.jpeg" alt="Clinic and Hospital Management System Architecture Dashboard">
         </div>
@@ -177,43 +242,11 @@
         <div class="stack-row">
           <span class="stack-tag">OOP</span><span class="stack-tag">Python</span><span class="stack-tag">Software Architecture</span><span class="stack-tag">Database Design</span>
         </div>
-        <a class="proj-link" href="https://github.com/M0hamedHelal" target="_blank" rel="noopener">GitHub</a>
-      </div>
-
-      <!-- PROJ_02: Heart Disease Prediction -->
-      <div class="proj-card reveal" style="--accent:var(--r);">
-        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/heart-disease-features.png" alt="Feature importance chart from the Random Forest heart disease model"></div>
-        <div class="proj-id"><span>PROJ_02 · FULL ML PIPELINE</span><span class="conf">acc 0.90</span></div>
-        <h3>Heart Disease Prediction — Full ML Pipeline</h3>
-        <p>End-to-end pipeline on clinical data: preprocessing and encoding, PCA and feature selection, four supervised classifiers (Logistic Regression, Decision Tree, Random Forest, SVM) with GridSearch hyperparameter tuning, K-Means for unsupervised exploration, and a Streamlit app for live predictions.</p>
-        <div class="stack-row">
-          <span class="stack-tag">Scikit-learn</span><span class="stack-tag">PCA</span><span class="stack-tag">Random Forest</span><span class="stack-tag">SVM</span><span class="stack-tag">Streamlit</span>
+        <div class="proj-links-row">
+          <!-- TODO: replace # with the live project link when ready -->
+          <a class="proj-link" href="https://github.com/M0hamedHelal" target="_blank" rel="noopener">GitHub</a>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">Website</a>
         </div>
-        <a class="proj-link" href="https://github.com/M0hamedHelal" target="_blank" rel="noopener">GitHub</a>
-      </div>
-
-      <!-- PROJ_03: Newborn Health Monitoring -->
-      <div class="proj-card reveal" style="--accent:var(--g);">
-        <div class="proj-thumb-wrap proj-thumb-placeholder">NEWBORN_RISK.PY</div>
-        <div class="proj-id"><span>PROJ_03 · WEB APP</span><span class="conf">classifier</span></div>
-        <h3>Newborn Health Monitoring &amp; Risk Assessment</h3>
-        <p>A Flask web app that classifies a newborn's risk level (Healthy / At Risk) from growth and vital-sign data — birth measurements, heart &amp; respiratory rate, oxygen saturation, temperature, feeding, and Apgar score — using a Decision Tree model served through a REST API with a browser-based form.</p>
-        <div class="stack-row">
-          <span class="stack-tag">Flask</span><span class="stack-tag">Decision Tree</span><span class="stack-tag">REST API</span><span class="stack-tag">HTML/CSS/JS</span>
-        </div>
-        <a class="proj-link" href="https://github.com/M0hamedHelal" target="_blank" rel="noopener">GitHub</a>
-      </div>
-
-      <!-- PROJ_04: CourseTA Platform -->
-      <div class="proj-card reveal" style="--accent:var(--b);">
-        <div class="proj-thumb-wrap proj-thumb-placeholder">AGENTIC_PLATFORM</div>
-        <div class="proj-id"><span>PROJ_04 · AGENTIC PLATFORM</span><span class="conf">RAG</span></div>
-        <h3>CourseTA (EduFlowTA) — Agentic Educational Content Platform</h3>
-        <p>Multi-agent system with specialized agents for question generation, summarization, and feedback-driven refinement, built on a RAG pipeline over course materials with async FastAPI microservices, Whisper transcription, and PyMuPDF parsing. Built as part of a team.</p>
-        <div class="stack-row">
-          <span class="stack-tag">LangChain</span><span class="stack-tag">LangGraph</span><span class="stack-tag">FastAPI</span><span class="stack-tag">RAG</span><span class="stack-tag">Whisper</span>
-        </div>
-        <a class="proj-link" href="https://github.com/M0hamedHelal/EduFlowTA" target="_blank" rel="noopener">GitHub</a>
       </div>
 
     </div>
