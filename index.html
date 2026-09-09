@@ -16,6 +16,36 @@
 
     <!-- Website icon (favicon) -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <style>
+      #education .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+      }
+      #education .cert-card {
+        padding: 1rem 1.1rem;
+      }
+      #education .cert-card h3 {
+        font-size: 0.98rem;
+        line-height: 1.3;
+        margin: 0 0 0.35rem;
+      }
+      #education .cert-card p {
+        font-size: 0.82rem;
+        line-height: 1.35;
+        margin: 0 0 0.5rem;
+      }
+      #education .cert-card a {
+        font-size: 0.78rem;
+      }
+      @media (max-width: 900px) {
+        #education .cert-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 560px) {
+        #education .cert-grid { grid-template-columns: 1fr; }
+      }
+    </style>
 </head>
 <body>
 
@@ -49,9 +79,21 @@
     </div>
 
     <h1>Hi, I'm <span class="grad-text">Mohamed Helal</span> 👋</h1>
-    <div class="role-line"><span>Machine Learning Engineer</span><span class="sep">|</span><span>Data Scientist</span></div>
-    <p class="lead">A Computer Science student and aspiring AI &amp; Machine Learning Engineer, focused on Machine Learning, Data Analysis, and Natural Language Processing. I build complete pipelines — from raw data to a working, deployable model — and I'm currently going deeper into LLMs, RAG, and AI agents.</p>
+    <!-- <div class="role-line"><span>Machine Learning Engineer</span><span class="sep">|</span><span>Data Scientist</span></div> -->
+     <div class="role-line">
+    <span>AI Engineer</span>
+    <span class="sep">|</span>
+    <span>NLP &amp; LLM Engineer</span>
+    </div>
+    <!-- <p class="lead">A Computer Science student and aspiring AI &amp; Machine Learning Engineer, focused on Machine Learning, Data Analysis, and Natural Language Processing. I build complete pipelines — from raw data to a working, deployable model — and I'm currently going deeper into LLMs, RAG, and AI agents.</p> -->
+   <p class="hero-slogan">Build Smarter. Automate Better. Grow Faster.</p>
 
+   <p class="lead">
+    I build practical AI solutions that help businesses automate repetitive
+    workflows, access information faster, and deliver smarter user experiences.
+    From intelligent chatbots and RAG-powered knowledge systems to AI agents,
+    I turn NLP and LLM technologies into practical, deployable applications.
+   </p>    
     <div class="social-row">
       <a href="https://github.com/M0hamedHelal" target="_blank" rel="noopener" aria-label="GitHub">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.66.5 12.03c0 5.1 3.29 9.42 7.86 10.95.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.55-3.88-1.55-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.11-.75.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.79 1.08.79 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.21.68.8.56A10.53 10.53 0 0 0 23.5 12.03C23.5 5.66 18.35.5 12 .5Z"/></svg>
@@ -72,46 +114,27 @@
   </div>
 </header>
 
-<div class="stats wrap">
-  <div class="stats-grid">
-    <div class="stat">
-      <b>96% Score</b>
-      <span>NTI — Machine Learning for Data Analysis</span>
-    </div>
-    <div class="stat">
-      <b>90%+ Accuracy</b>
-      <span>Random Forest &amp; SVM on real clinical data</span>
-    </div>
-    <div class="stat">
-      <b>4 Systems Shipped</b>
-      <span>From notebook to a deployed, working app</span>
-    </div>
-    <div class="stat">
-      <b>NLP &amp; LLM Focus</b>
-      <span>RAG, LangChain, LangGraph, Fine-Tuning</span>
-    </div>
-  </div>
-</div>
-
 <section id="about">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="cmd"><span class="p1">$</span><span class="p2">cat about.md</span></div>
-      <h2>Data pipelines that end in something you can actually use.</h2>
+      <h2>Building AI solutions from data to deployment.</h2>
     </div>
     <div class="about-grid reveal">
       <div>
-        <p>I'm a Computer Science student at Menoufia University (Faculty of Computers and Information), specializing in Machine Learning, Data Analysis, and Natural Language Processing. I like taking a project the full distance — cleaning and exploring the data, engineering features, comparing models properly, tuning them, and then wrapping the result in something people can actually click through, not just a notebook.</p>
-        <p>I'm currently going deeper into NLP and Large Language Models — LangChain, LangGraph, Retrieval-Augmented Generation (RAG), and fine-tuning — through hands-on training with the NTI Digital Egypt Youth Program, alongside applied work in classical ML and data analysis.</p>
+        <!-- <p>I'm a Computer Science student at Menoufia University (Faculty of Computers and Information), specializing in Machine Learning, Data Analysis, and Natural Language Processing. I like taking a project the full distance — cleaning and exploring the data, engineering features, comparing models properly, tuning them, and then wrapping the result in something people can actually click through, not just a notebook.</p>
+        <p>I'm currently going deeper into NLP and Large Language Models — LangChain, LangGraph, Retrieval-Augmented Generation (RAG), and fine-tuning — through hands-on training with the NTI Digital Egypt Youth Program, alongside applied work in classical ML and data analysis.</p> -->
+        <p>I’m a Computer Science student at Menoufia University with a focus on Artificial Intelligence, particularly Natural Language Processing and Large Language Models. I enjoy turning real-world problems into practical AI solutions — from preparing and understanding data to developing, evaluating, and deploying machine learning models.</p>
+        <p>My current focus is on NLP and LLM applications, including Retrieval-Augmented Generation, AI agents, and model integration. Alongside this, I have a strong foundation in machine learning, data analysis, and software development, allowing me to approach AI projects from both the modeling and engineering sides.</p>
       </div>
       <div>
         <div class="chip-cloud">
-          <span class="chip c0">Machine Learning &amp; Data Analysis</span>
-          <span class="chip c1">NLP &amp; LLMs</span>
-          <span class="chip c2">RAG &amp; AI Agents</span>
-          <span class="chip c3">Model Deployment</span>
-          <span class="chip c0">Data Visualization</span>
-          <span class="chip c1">MLOps Basics</span>
+          <span class="chip c0">NLP &amp; LLM Applications</span>
+          <span class="chip c1">Machine Learning</span>
+          <span class="chip c2">RAG Systems</span>
+          <span class="chip c3">AI Agents</span>
+          <span class="chip c0">End-to-End AI Development</span>
+          <span class="chip c1">Model Deployment</span>
         </div>
       </div>
     </div>
@@ -122,7 +145,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="cmd"><span class="p1">$</span><span class="p2">tail -f training.log</span></div>
-      <h2>Where I've been building my skills.</h2>
+      <h2>Training &amp; Professional Development</h2>
     </div>
     <div class="exp-card reveal">
       <div class="exp-top">
@@ -174,11 +197,11 @@
     <!-- Add any NEW project block right here (at the top) so the newest work shows first. -->
     <div class="proj-grid">
 
-      <!-- PROJ_04: CourseTA Platform -->
+      <!-- PROJ_05: CourseTA Platform -->
       <div class="proj-card reveal" data-cats="nlp llm rag agents" style="--accent:var(--b);">
         <!-- <div class="proj-thumb-wrap proj-thumb-placeholder">AGENTIC_PLATFORM</div> -->
         <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/eduflowta-thumb.png" alt="EduFlowTA agentic pipeline: upload, RAG retrieval, and three specialized agents for question generation, summarization, and Q&A"></div>
-        <div class="proj-id"><span>PROJ_04 · AGENTIC PLATFORM</span><span class="conf">RAG</span></div>
+        <div class="proj-id"><span>PROJ_05 · AGENTIC PLATFORM</span><span class="conf">RAG</span></div>
         <h3>CourseTA (EduFlowTA) — Agentic Educational Content Platform</h3>
         <p>Multi-agent system with specialized agents for question generation, summarization, and feedback-driven refinement, built on a RAG pipeline over course materials with async FastAPI microservices, Whisper transcription, and PyMuPDF parsing. Built as part of a team.</p>
         <div class="stack-row">
@@ -192,10 +215,10 @@
         </div>
       </div>
 
-      <!-- PROJ_03: Newborn Health Monitoring -->
+      <!-- PROJ_04: Newborn Health Monitoring -->
       <div class="proj-card reveal" data-cats="ml" style="--accent:var(--g);">
         <div class="proj-thumb-wrap proj-thumb-placeholder">NEWBORN_RISK.PY</div>
-        <div class="proj-id"><span>PROJ_03 · WEB APP</span><span class="conf">classifier</span></div>
+        <div class="proj-id"><span>PROJ_04 · WEB APP</span><span class="conf">classifier</span></div>
         <h3>Newborn Health Monitoring &amp; Risk Assessment</h3>
         <p>A Flask web app that classifies a newborn's risk level (Healthy / At Risk) from growth and vital-sign data — birth measurements, heart &amp; respiratory rate, oxygen saturation, temperature, feeding, and Apgar score — using a Decision Tree model served through a REST API with a browser-based form.</p>
         <div class="stack-row">
@@ -208,10 +231,10 @@
         </div>
       </div>
 
-      <!-- PROJ_02: Heart Disease Prediction -->
+      <!-- PROJ_03: Heart Disease Prediction -->
       <div class="proj-card reveal" data-cats="data-analysis ml" style="--accent:var(--r);">
         <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/heart-disease-features.png" alt="Feature importance chart from the Random Forest heart disease model"></div>
-        <div class="proj-id"><span>PROJ_02 · FULL ML PIPELINE</span><span class="conf">acc 0.90</span></div>
+        <div class="proj-id"><span>PROJ_03 · FULL ML PIPELINE</span><span class="conf">acc 0.90</span></div>
         <h3>Heart Disease Prediction — Full ML Pipeline</h3>
         <p>End-to-end pipeline on clinical data: preprocessing and encoding, PCA and feature selection, four supervised classifiers (Logistic Regression, Decision Tree, Random Forest, SVM) with GridSearch hyperparameter tuning, K-Means for unsupervised exploration, and a Streamlit app for live predictions.</p>
         <div class="stack-row">
@@ -221,6 +244,22 @@
           <!-- TODO: replace # with the live project link when ready -->
           <a class="proj-link" href="https://github.com/M0hamedHelal" target="_blank" rel="noopener">GitHub</a>
           <a class="proj-link" href="#" target="_blank" rel="noopener">Website</a>
+        </div>
+      </div>
+
+      <!-- PROJ_02: Customer Shopping Behavior Analysis -->
+      <div class="proj-card reveal" data-cats="data-analysis" style="--accent:var(--amber);">
+        <div class="proj-thumb-wrap"><img class="proj-thumb" src="images/analysis1.png" alt="Customer Shopping Behavior Analysis dashboard and workflow overview"></div>
+        <div class="proj-id"><span>PROJ_02 · DATA ANALYTICS</span><span class="conf">3,900 rows</span></div>
+        <h3>Customer Shopping Behavior Analysis — End-to-End Data Analytics</h3>
+        <p>End-to-end analytics project on a retail transactions dataset: data cleaning and feature engineering in Pandas, loading into PostgreSQL, and answering 10 business questions in SQL — covering revenue by segment, discount dependency, and customer loyalty tiers. Findings were visualized in an interactive Power BI dashboard and packaged into a stakeholder presentation.</p>
+        <div class="stack-row">
+          <span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">SQL</span><span class="stack-tag">Power BI</span>
+        </div>
+        <div class="proj-links-row">
+          <a class="proj-link" href="https://github.com/M0hamedHelal/-customer-shopping-behavior-analysis.git" target="_blank" rel="noopener">GitHub</a>
+          <!-- TODO: replace # with the Power BI dashboard or Gamma presentation link when ready -->
+          <a class="proj-link" href="#" target="_blank" rel="noopener">Dashboard</a>
         </div>
       </div>
 
@@ -255,7 +294,7 @@
 
     <!-- More Projects Notice & Link -->
     <div class="more-projects reveal" style="text-align: center; margin-top: 2.5rem; color: var(--text-muted);">
-      <p>Looking for more implementations and data analytics projects? Check out my full repository collection on <a href="https://github.com/M0hamedHelal" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">GitHub ↗</a>.</p>
+      <p>Looking for more implementations and AI projects? Check out my full repository collection on <a href="https://github.com/M0hamedHelal" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">GitHub ↗</a>.</p>
     </div>
 
   </div>
@@ -301,7 +340,11 @@
       <div class="skill-block reveal" style="--accent:var(--r);">
         <h4>Languages</h4>
         <div class="chip-cloud">
+<<<<<<< HEAD
           <span class="chip c1">Arabic — Native</span><span class="chip c1">English(B2)</span>
+=======
+          <span class="chip c1">Arabic — Native</span><span class="chip c1">English — B2 </span>
+>>>>>>> a86b030 (New update)
         </div>
       </div>
     </div>
@@ -315,17 +358,39 @@
       <h2>Education.</h2>
     </div>
     <div class="edu-card reveal">
-      <span class="period">Present</span>
+      <span class="period">2023 – 2027 (Expected)</span>
       <h3>B.Sc. in Computer Science — Faculty of Computers and Information, Menoufia University</h3>
+      <p style="margin-top:0.5rem; color: var(--text-muted);">GPA: 3.24</p>
     </div>
 
     <div class="cert-grid reveal">
-      <div class="edu-card" style="margin-bottom:0;">
-        <h3 style="margin-top:0;">Training &amp; Programs</h3>
-        <ul class="cert-list">
-          <li><span><b>Machine Learning for Data Analysis</b> — NTI, Digital Egypt Youth Program (Score: 96%)</span></li>
-          <li><span><b>Natural Language Processing</b> — NTI, Digital Egypt Youth Program (in progress)</span></li>
-        </ul>
+      <div class="edu-card cert-card" style="margin-bottom:0;">
+        <h3>Machine Learning for Data Analysis</h3>
+        <p style="color: var(--text-muted);">National Telecommunication Institute (NTI) · Score: 96%</p>
+        <a href="images/certficet/ML_NTI.png" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">View Certificate ↗</a>
+      </div>
+
+      <div class="edu-card cert-card" style="margin-bottom:0;">
+        <h3>Natural Language Processing</h3>
+        <p style="color: var(--text-muted);">National Telecommunication Institute (NTI) · In Progress</p>
+      </div>
+
+      <div class="edu-card cert-card" style="margin-bottom:0;">
+        <h3>Building LLM Applications With Prompt Engineering</h3>
+        <p style="color: var(--text-muted);">NVIDIA — Certificate of Competency</p>
+        <a href="images/certficet/llm_app.png" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">View Certificate ↗</a>
+      </div>
+
+      <div class="edu-card cert-card" style="margin-bottom:0;">
+        <h3>AI for All: From Basics to GenAI Practice</h3>
+        <p style="color: var(--text-muted);">NVIDIA Academy — Certificate of Completion</p>
+        <a href="images/certficet/basic_gen.png" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">View Certificate ↗</a>
+      </div>
+
+      <div class="edu-card cert-card" style="margin-bottom:0;">
+        <h3>AI and Machine Learning Summer Camp</h3>
+        <p style="color: var(--text-muted);">Sprints , Microsoft — 40 Learning Hours</p>
+        <a href="images/certficet/sprintes.png" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">View Certificate ↗</a>
       </div>
     </div>
   </div>
@@ -349,13 +414,12 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Mohamed Helal. Built for GitHub Pages.</span>
+      <span>© 2026 Mohamed Helal.</span>
       <span><span class="ok">●</span> all systems online</span>
     </div>
   </div>
 </footer>
 
 <script src="assets/js/main.js" defer></script>
-
 </body>
 </html>
